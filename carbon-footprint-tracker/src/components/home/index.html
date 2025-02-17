@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Fashion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+    <header>
+        <div class="logo">
+            <h1>Sustainable Fashion</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Join the Sustainable Fashion Movement</h2>
+        <p>Discover eco-conscious fashion that looks good and does good.</p>
+    </section>
+
+    <!-- Manufacturing Process Sustainability Checker Section -->
+    <div class="card">
+        <div class="card-header">
+            <h1 class="card-title">Manufacturing Process Sustainability Checker</h1>
+        </div>
+        <div class="card-content">
+            <form id="sustainability-form" class="form">
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label class="input-label">Company</label>
+                        <input type="text" id="companyname" class="input-field" placeholder="Enter Company Name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Product Type</label>
+                        <input type="text" id="productType" class="input-field" placeholder="Enter Product Type" required>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Energy Consumption (kWh)</label>
+                        <input type="number" id="energyConsumption" class="input-field" placeholder="Enter Energy Consumption" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Water Usage (Liters)</label>
+                        <input type="number" id="waterUsage" class="input-field" placeholder="Enter Water Usage" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Waste Production (kg)</label>
+                        <input type="number" id="wasteProduction" class="input-field" placeholder="Enter Waste Production" required>
+                    </div>
+
+                    <!-- New fields -->
+                    <div class="input-group">
+                        <label class="input-label">Greenhouse Gas Emissions (kg)</label>
+                        <input type="number" id="Greenhouse_Gas_Emissions" class="input-field" placeholder="Enter Emissions" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Pollutants Emitted (kg)</label>
+                        <input type="number" id="Pollutants_Emitted" class="input-field" placeholder="Enter Pollutants Emitted" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Water Consumption (Liters)</label>
+                        <input type="number" id="Water_Consumption" class="input-field" placeholder="Enter Water Consumption" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Waste Generation (kg)</label>
+                        <input type="number" id="Waste_Generation" class="input-field" placeholder="Enter Waste Generation" required>
+                    </div>
+                </div>
+
+                <button type="submit" id="submit-button" class="submit-button">
+                    Check Sustainability
+                </button>
+            </form>
+
+            <div id="error-message" class="alert error" style="display: none;"></div>
+
+            <div id="result" class="result-card" style="display: none;">
+                <h3 class="result-title">Sustainability Assessment</h3>
+                <p class="result-text" id="result-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sustainable Fashion. All rights reserved.</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
