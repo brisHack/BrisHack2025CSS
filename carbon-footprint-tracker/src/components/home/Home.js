@@ -26,14 +26,25 @@ const Home = () => {
     setLoading(true);
     setError(null);
 
+    const apiData = {
+      input: {
+        Company: 'Adidas', // Hardcoded for now, could be made dynamic
+        Product_Type: 3,   // Hardcoded for now, could be made dynamic
+        Energy_Consumption: Number(formData.energyConsumption),
+        Water_Consumption: Number(formData.waterUsage),
+        Waste_Generation: Number(formData.wasteProduction),
+        Greenhouse_Gas_Emissions: 4000, // Hardcoded for now, could be made dynamic
+        Pollutants_Emitted: 12         // Hardcoded for now, could be made dynamic
+      }
+    };
+
     try {
-      // Replace this URL with your actual API endpoint
-      const response = await fetch('YOUR_API_ENDPOINT', {
+      const response = await fetch('http://localhost:5000/api/process', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(apiData)
       });
 
       if (!response.ok) {
